@@ -1,0 +1,328 @@
+@charset "UTF-8";
+
+/*コンテンツ全体に対する指定*/
+html {
+    font-size: 100%;
+}
+body {
+    font-family: 'M PLUS 1p', sans-serif;
+    color: #4D4D4D;
+}
+main {
+    min-height: calc(100vh - 80px - 70px);
+}
+.wrapper {
+    margin: 0;
+    padding: 0 4%;
+}
+.page_header {
+    background-color: #000000;
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    text-decoration: none;
+    color: #ffffff;
+}
+.home_icon {
+    color: #FFFFFF;
+    font-size: 30px;
+}
+.page_footer {
+    height: 70px;
+    background-color: #D2D2D2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-text {
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+/* upload.php */
+.content_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.upload_content_form {
+    width: 50%;
+}
+.upload_content_label {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    background-color: #CCCCCC;
+    border-radius: 40px;
+    color: #ffffff;
+}
+.plus_icon {
+    display: inline-block;
+    font-size: 50px;
+}
+.upload_text {
+    font-size: 30px;
+    font-weight: bold;
+}
+.input_file {
+    display: none;
+}
+.input_text {
+    margin-top: 10px;
+    width: 100%;
+    border: 1px solid #E6E6E6;
+    padding: 10px;
+    height: 73px;
+}
+.upload_content_label img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.input_text::placeholder {
+    color: #E6E6E6;
+}
+.upload_submit {
+    display: block;
+    margin-top: 10px;
+    border-radius: 18px;
+    font-size: 18px;
+    padding: 2px 30px;
+    background: #F15A24;
+    color: #ffffff;
+    margin-left: auto;
+}
+
+/* index.php */
+.article {
+    margin: 5% 0;
+}
+.grid {
+    margin: 0 auto;
+}
+.grid_item {
+    width: 250px;
+}
+.grid_item img {
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 40px;
+    object-fit: cover;
+}
+.add_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    color: #4D4D4D;
+    border: 1px solid #eae7e7;
+    border-radius: 50%;
+    box-shadow: 1px 1px #00000080;
+    text-decoration: none;
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    background: #FFFFFF;
+    width: 60px;
+    height: 60px;
+}
+
+/* show.php */
+.content {
+    width: 50%;
+    margin: 0 auto;
+}
+.main_content img {
+    width: 100%;
+    height: 50vh;
+    border-radius: 40px;
+    object-fit: cover;
+}
+.main_content p {
+    margin-top: 10px;
+    width: 100%;
+    color: #4D4D4D;
+}
+.button {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+.edit_button {
+    font-size: 18px;
+    border-radius: 18px;
+    padding: 5px 30px;
+    background: #39B54A;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.delete_button {
+    font-size: 18px;
+    border-radius: 18px;
+    padding: 5px 30px;
+    background: #CCCCCC;
+    margin-left: 10px;
+    color: #FFFFFF;
+}
+
+/* edit.php */
+.update_button {
+    font-size: 18px;
+    border-radius: 18px;
+    padding: 5px 30px;
+    background: #F15A24;
+    color: #FFFFFF;
+}
+
+/* signup.php */
+.signup_content {
+    background-color: #DDDDDD;
+    border-radius: 10px;
+    width: 500px;
+    margin: 50px auto;
+    padding: 50px;
+}
+.signup_title {
+    text-align: center;
+}
+.email_label,
+.name_label,
+.password_label {
+    display: block;
+    margin: 10px 0px;
+}
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+    display: block;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+input[type="email"]::placeholder,
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: #999999;
+}
+.button_area {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.signup_button,
+.login_button {
+    background: #239bed;
+    padding: 15px 0;
+    width: 48%;
+    color: #FFFFFF;
+    letter-spacing: 0.5rem;
+    text-indent: 0.5rem;
+    border-radius: 30px;
+}
+.login_page_button,
+.signup_page_button {
+    text-align: center;
+    padding: 15px 0;
+    width: 48%;
+    background: #000000;
+    color: #FFFFFF;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+/* login.php */
+.login_content {
+    background-color: #DDDDDD;
+    border-radius: 10px;
+    width: 500px;
+    margin: 50px auto;
+    padding: 50px;
+}
+.login_title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.login_button {
+    border-radius: 30px;
+    background: #239bed;
+    padding: 15px 0;
+    width: 48%;
+    color: #FFFFFF;
+    letter-spacing: 0.5rem;
+    text-indent: 0.5rem
+}
+.signup_page_button {
+    border-radius: 30px;
+    text-align: center;
+    padding: 15px 0;
+    width: 48%;
+    background: #000000;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* レスポンシブ */
+@media (max-width: 900px) {
+    /* upload.php */
+    .upload_content_label {
+        height: 355px;
+    }
+    .upload_content_form {
+        width: 70%;
+    }
+    /* show.php */
+    .content {
+        width: 70%;
+    }
+}
+
+@media (max-width: 600px) {
+    /* upload.php */
+    .upload_content_form {
+        width: 90%;
+    }
+    /* show.php */
+    .content {
+        width: 90%;
+    }
+    /* signup.php */
+    .signup_content {
+        width: 70%;
+    }
+    .button_area {
+        margin-top: 15px;
+        flex-direction: column;
+    }
+    .signup_button {
+        width: 100%;
+        padding: 10px;
+    }
+    .login_page_button {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        padding: 10px;
+    }
+    /* login.php */
+    .login_content {
+        width: 70%;
+    }
+    .login_button {
+        width: 100%;
+        padding: 10px;
+    }
+    .signup_page_button {
+        text-align: center;
+        width: 100%;
+        margin-top: 5px;
+        padding: 10px;
+    }
+}
