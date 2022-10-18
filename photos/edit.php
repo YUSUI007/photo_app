@@ -12,9 +12,7 @@
             </label>
             <input class="input_file" type="file" id="file_upload" name="image">
             <textarea class="input_text" rows="5" name="description" placeholder="画像の詳細を入力してください">画像の説明文</textarea>
-            <div class="button">
-                <input type="submit" value="更 新" class="update_button">
-            </div>
+            <input type="submit" value="更 新" class="update_button">
         </form>
     </main>
 

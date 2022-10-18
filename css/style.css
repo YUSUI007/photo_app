@@ -24,7 +24,35 @@ main {
 }
 .logo {
     text-decoration: none;
-    color: #ffffff;
+    color: #FFFFFF;
+}
+.right_content {
+    display: flex;
+}
+.login_info {
+    margin-right: 20px;
+    align-items: center;
+    display: flex;
+}
+.login_info p {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+.header_logout_button {
+    align-items: center;
+    font-size: 1rem;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-right: 10px;
+}
+.header_login_button {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-right: 10px;
 }
 .home_icon {
     color: #FFFFFF;
@@ -39,8 +67,17 @@ main {
     align-items: center;
 }
 .footer-text {
-    color: #ffffff;
+    color: #FFFFFF;
     font-size: 1rem;
+}
+.errors {
+    margin: 10px 0;
+}
+.errors li {
+    margin-top: 5px;
+    color: #EC008C;
+    text-align: center;
+    list-style: none;
 }
 
 /* upload.php */
@@ -57,10 +94,10 @@ main {
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    height: 350px;
+    height: 50vh;
     background-color: #CCCCCC;
     border-radius: 40px;
-    color: #ffffff;
+    color: #FFFFFF;
 }
 .plus_icon {
     display: inline-block;
@@ -93,9 +130,9 @@ main {
     margin-top: 10px;
     border-radius: 18px;
     font-size: 18px;
-    padding: 2px 30px;
+    padding: 5px 30px;
     background: #F15A24;
-    color: #ffffff;
+    color: #FFFFFF;
     margin-left: auto;
 }
 
@@ -121,7 +158,7 @@ main {
     justify-content: center;
     font-size: 35px;
     color: #4D4D4D;
-    border: 1px solid #eae7e7;
+    border: 1px solid #EAE7E7;
     border-radius: 50%;
     box-shadow: 1px 1px #00000080;
     text-decoration: none;
@@ -219,7 +256,7 @@ input[type="password"]::placeholder {
 }
 .signup_button,
 .login_button {
-    background: #239bed;
+    background: #239BED;
     padding: 15px 0;
     width: 48%;
     color: #FFFFFF;
@@ -252,7 +289,7 @@ input[type="password"]::placeholder {
 }
 .login_button {
     border-radius: 30px;
-    background: #239bed;
+    background: #239BED;
     padding: 15px 0;
     width: 48%;
     color: #FFFFFF;
@@ -272,9 +309,6 @@ input[type="password"]::placeholder {
 /* レスポンシブ */
 @media (max-width: 900px) {
     /* upload.php */
-    .upload_content_label {
-        height: 355px;
-    }
     .upload_content_form {
         width: 70%;
     }

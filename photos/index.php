@@ -1,3 +1,18 @@
+<?php
+
+require_once __DIR__ . '/../common/functions.php';
+
+// セッション開始
+session_start();
+
+$current_user = '';
+
+if (isset($_SESSION['current_user'])) {
+    $current_user = $_SESSION['current_user'];
+}
+
+$photos = find_photos_all()
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <?php include_once __DIR__ . '/../common/_head.html' ?>
@@ -7,39 +22,13 @@
 
     <main class="article wrapper">
         <div class="grid" data-masonry='{"columnWidth": 270, "itemSelector": ".grid_item", "isFitWidth": true}'>
-            <div class="grid_item">
-                <a href="show.php"><img src="https://picsum.photos/200/300" height="200"></a>
-            </div>
-            <div class="grid_item">
-                <a href="show.php"><img src="https://picsum.photos/200/300" height="300"></a>
-            </div>
-            <div class="grid_item">
-                <a href="show.php"><img src="https://picsum.photos/200/300" height="250"></a>
-            </div>
-            <div class="grid_item">
-                <a href="show.php"><img src="https://picsum.photos/200/300" height="300"></a>
-            </div>
-            <div class="grid_item">
-                <a href="show.php"><img src="https://picsum.photos/200/300" height="250"></a>
-            </div>
-            <div class="grid_item">
-                <a href="show.php"><img src="https://picsum.photos/200/300" height="200"></a>
-            </div>
-            <div class="grid_item">
-                <a href="show.php"><img src="https://picsum.photos/200/300" height="250"></a>
-            </div>
-            <div class="grid_item">
-                <a href="show.php"><img src="https://picsum.photos/200/300" height="300"></a>
-            </div>
-            <div class="grid_item">
-                <a href="show.php"><img src="https://picsum.photos/200/300" height="350"></a>
-            </div>
-            <div class="grid_item">
-                <a href="show.php"><img src="https://picsum.photos/200/300" height="300"></a>
-            </div>
-            <div class="grid_item">
-                <a href="show.php"><img src="https://picsum.photos/200/300" height="200"></a>
-            </div>
+            <?php foreach ($photos as $photo) : ?>
+                <div class="grid_item">
+                    <a href="show.php?id=<?= h($photo['id']) ?>">
+                        <img src="../images/<?= h($photo['image']) ?>">
+                    </a>
+                </div>
+            <?php endforeach; ?>
         </div>
         <a href="upload.php" class="add_button">
             <i class="fa-solid fa-plus"></i>
@@ -47,6 +36,7 @@
     </main>
 
     <?php include_once __DIR__ . '/../common/_footer.html' ?>
+
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 </body>
 

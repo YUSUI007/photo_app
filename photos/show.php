@@ -1,3 +1,28 @@
+<?php
+
+// 関数ファイルを読み込む
+require_once __DIR__ . '/../common/functions.php';
+
+// セッション開始
+session_start();
+
+$current_user = '';
+$id = 0;
+
+// パラメータが渡されていなけらば一覧画面に戻す
+$id = filter_input(INPUT_GET, 'id');
+if (empty($id)) {
+    header('Location: index.php');
+    exit;
+}
+
+if (isset($_SESSION['current_user'])) {
+    $current_user = $_SESSION['current_user'];
+}
+
+// idを基にデータを取得
+$photo = find_photo_by_id($id);
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <?php include_once __DIR__ . '/../common/_head.html' ?>
@@ -7,14 +32,16 @@
 
     <main class="main_content content_center wrapper">
         <div class="content">
-            <img src="https://picsum.photos/400/600">
+            <img src="../images/<?= h($photo['image']); ?>">
             <p>
-                画像の説明文
+                <?= h($photo['description']); ?>
             </p>
-            <div class="button">
-                <a href="edit.php" class="edit_button">編 集</a>
-                <button class="delete_button">削 除</button>
-            </div>
+            <?php if (!empty($current_user) && $current_user['id'] == $photo['user_id']) : ?>
+                <div class="button">
+                    <a href="edit.php" class="edit_button">編 集</a>
+                    <button class="delete_button">削 除</button>
+                </div>
+            <?php endif; ?>
         </div>
     </main>
 
